@@ -1,4 +1,5 @@
 /* global monogatari */
+const dayjs = require('dayjs');
 
 // Define the messages used in the game.
 monogatari.action ('message').messages ({
@@ -88,7 +89,7 @@ monogatari.script ({
 		'show notification Welcome',
 		{
 			'Input': {
-				'Text': 'What is your name?',
+				'Text': `What is your name?${dayjs().format('YYYY-MM-DD')}`,
 				'Validation': function (input) {
 					return input.trim ().length > 0;
 				},
