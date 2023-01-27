@@ -41,10 +41,12 @@
   "scripts": {
     "serve": "yarn http-server . -o -p 3000",
     "start": "yarn electron . --enable-logging",
+    "start:script": "yarn webpack --watch",
     "build": "yarn electron-builder -mwl",
     "build:windows": "yarn electron-builder -w",
     "build:mac": "yarn electron-builder -m",
-    "build:linux": "yarn electron-builder -l"
+    "build:linux": "yarn electron-builder -l",
+    "build:script": "yarn webpack"
   },
   "devDependencies": {
     "@babel/core": "^7.13.8",
@@ -52,6 +54,11 @@
     "electron-builder": "^22.9.1",
     "electron-notarize": "^1.0.0",
     "http-server": "^0.12.3",
-    "parcel": "^1.12.4"
+    "parcel": "^1.12.4",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.7"
   }
 }
